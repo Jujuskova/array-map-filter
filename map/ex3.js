@@ -1,6 +1,6 @@
 /* Array.prototype.map - Exercice 3
 
-Ecrire une fonction getMoviesFreshness qui reçoit comme un argument un tableau
+Ecrire une fonction getMoviesFreshness qui reçoit comme argument un tableau
 d'objets représentant des films.
 Chaque film a deux propriétés:
   - `name` le nom du film
@@ -60,6 +60,19 @@ En sortie:
  */
 
 function getMoviesFreshness(movies) {
+  let plop = movies.map(function(x) {
+    if (x.rating < 60) {
+      x.label = 'roten';
+      return x;
+    } else if (x.rating <= 75 && x.rating >= 60) {
+      x.label = 'fresh';
+      return x;
+    } else {
+      x.label = 'certified fresh';
+      return x;
+    }
+  })
+  return plop;
 }
 
 
