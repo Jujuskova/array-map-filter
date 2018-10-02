@@ -23,7 +23,7 @@ où R est le rayon donné en entrée, C et S les valeurs que tu dois calculer.
 
 Exemple de tableau d'entrée :
 
-[1, 3, 4.5, 7]
+[1, 2, 7, 11]
 
 Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 
@@ -52,8 +52,12 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 */
 
 function getCirclesProperties(radiuses) {
+  const result = radiuses.map(function(x) {
+    let test = {radius : x, circumference : (2 * Math.PI * x).toFixed(3), surface : (Math.PI * x * x).toFixed(3)};
+    return test;
+  })
+  return result;
 }
-
 
 
 // Ne pas modifier l'export

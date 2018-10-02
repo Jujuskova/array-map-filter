@@ -62,7 +62,7 @@ En sortie:
 function getMoviesFreshness(movies) {
   let plop = movies.map(function(x) {
     if (x.rating < 60) {
-      x.label = 'roten';
+      x.label = 'rotten';
       return x;
     } else if (x.rating <= 75 && x.rating >= 60) {
       x.label = 'fresh';
